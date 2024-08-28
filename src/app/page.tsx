@@ -1,113 +1,159 @@
 import Image from "next/image";
+import Button from "@/components/Button";
 
-export default function Home() {
+const Home = () => {
+  const companies = [
+    "1.jpeg",
+    "2.jpeg",
+    "3.jpeg",
+    "4.jpeg",
+    "5.jpeg",
+    "6.jpeg",
+    "7.jpeg",
+    "8.jpeg",
+  ];
+
+  const whyChooseUsData = [
+    {
+      title: "High-Quality Courses",
+      description:
+        "Our courses are crafted by industry experts with in-depth content, real-world examples, and projects that align with the latest trends.",
+      image: "/images/why-choose-us/high-quality-courses.jpeg",
+    },
+    {
+      title: "Expert Instructors",
+      description:
+        "Learn from professionals who have worked in top companies, providing practical experience and insights that will set you apart.",
+      image: "/images/why-choose-us/expert-instructors.jpeg",
+    },
+    {
+      title: "Flexible Learning",
+      description:
+        "Access our content anytime, anywhere. With self-paced learning, you can schedule your studies whenever it’s convenient for you.",
+      image: "/images/why-choose-us/flexible-learning.jpeg",
+    },
+    {
+      title: "Industry-Recognized Certifications",
+      description:
+        "Earn certificates recognized by top companies globally. Our certification programs are designed to enhance your credibility and open doors to new opportunities.",
+      image: "/images/why-choose-us/certification.jpeg",
+    },
+    {
+      title: "Interactive Learning Experience",
+      description:
+        "Engage with hands-on projects, quizzes, and peer discussions that make learning fun and effective. Our courses provide an immersive learning experience.",
+      image: "/images/why-choose-us/interactive-learning.jpeg",
+    },
+    {
+      title: "Supportive Community",
+      description:
+        "Join a community of learners, share knowledge, and grow together. Our platform encourages networking and collaboration to support your learning journey.",
+      image: "/images/why-choose-us/supportive-community.jpeg",
+    },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="bg-darkPrimary text-white min-h-screen">
+      {/* Hero Section */}
+      <section className="relative text-center mb-8 py-32 md:py-48 px-4">
+        {/* Background Video */}
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <source src="/videos/hero-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        {/* Hero Content */}
+        <div className="relative z-10">
+          <h1 className="text-5xl font-bold text-primary mb-6">
+            Welcome to Skillwave
+          </h1>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-4 fade-in delay-1">
+            Find top-quality courses to boost your skills and advance your
+            career.
           </p>
-        </a>
+          <Button href="/courses" variant="primary">
+            Get Started Now
+          </Button>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      {/* Why Choose Us Section */}
+      <section className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
+          Why Choose Us?
+        </h2>
+        <div className="grid grid-cols-1 gap-16 max-w-7xl mx-auto px-4">
+          {whyChooseUsData.map((item, index) => (
+            <div
+              key={index}
+              className="bg-darkSecondary p-8 md:p-12 rounded-lg shadow-lg max-w-[1200px] h-auto md:h-[550px] mx-auto relative flex items-center justify-center text-center"
+              style={{
+                backgroundImage: `url(${item.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="absolute inset-0 bg-black opacity-75 md:opacity-60 rounded-lg"></div>
+              <div className="relative z-10 text-center">
+                <h3 className="text-2xl md:text-4xl font-bold text-primary mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-sm md:text-lg text-gray-300">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      {/* Top Companies Section */}
+      <section className="mb-16 px-4 md:px-0">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-12">
+          Top Companies Where Our Students Work
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {companies.map((company, index) => (
+            <div key={index} className="flex justify-center items-center">
+              <Image
+                src={`/images/company-logos/${company}`}
+                alt={`Company ${index + 1}`}
+                width={150}
+                height={100}
+                className="object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+      {/* Call to Action Section */}
+      <section className="text-center py-16 bg-gradient-to-r from-primary to-green-500 text-black">
+        <h2 className="text-4xl font-bold mb-4">Ready to Start Learning?</h2>
+        <p className="text-lg mb-8">
+          Explore our wide range of courses and start your learning journey
+          today.
+        </p>
+        <Button
+          href="/courses"
+          className="bg-black text-white hover:bg-gray-800"
+          variant="secondary"
+          size="medium"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          Explore Courses
+        </Button>
+      </section>
+    </div>
   );
-}
+};
+
+export default Home;
