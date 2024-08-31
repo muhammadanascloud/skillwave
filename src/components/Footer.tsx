@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import Image from "next/image"; 
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -11,13 +12,17 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold text-primary mb-4">Skillwave</h3>
             <p className="text-gray-400">
-              Skillwave offers high-quality courses to help you develop the skills needed to advance your career. Join us and start your learning journey today.
+              Skillwave offers high-quality courses to help you develop the
+              skills needed to advance your career. Join us and start your
+              learning journey today.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold text-primary mb-4">Quick Links</h3>
+            <h3 className="text-xl font-semibold text-primary mb-4">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="hover:text-green-400">
@@ -44,7 +49,9 @@ const Footer = () => {
 
           {/* Social Media Links */}
           <div>
-            <h3 className="text-xl font-semibold text-primary mb-4">Follow Us</h3>
+            <h3 className="text-xl font-semibold text-primary mb-4">
+              Follow Us
+            </h3>
             <div className="flex space-x-4">
               <Link
                 href="https://facebook.com"
@@ -60,7 +67,13 @@ const Footer = () => {
                 className="hover:text-green-400"
                 aria-label="Twitter"
               >
-                <FaTwitter size={24} />
+                <Image
+                  src="/twitter-x-logo.svg" 
+                  alt="X logo"
+                  width={24}
+                  height={24}
+                  className="object-contain" 
+                />
               </Link>
               <Link
                 href="https://instagram.com"

@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { usePathname } from "next/navigation"; // Used to detect active links
+import { usePathname } from "next/navigation"; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname(); // Get the current path
+  const pathname = usePathname(); 
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

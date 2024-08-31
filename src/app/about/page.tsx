@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "@/components/Button"; // Import the Button component
+import Button from "@/components/Button";
 
 const About = () => {
   const reviews = [
@@ -114,55 +114,49 @@ const About = () => {
         </div>
       </div>
 
-{/* Mission Section */}
-<div className="container mx-auto py-12 md:py-16 px-4">
-  <div className="bg-darkSecondary p-6 md:p-8 rounded-xl shadow-lg">
-    <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-      <div className="md:w-1/2 flex justify-center mb-6 md:mb-0 order-2 md:order-1">
-        <div className="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500">
-          <Image
-            src="/images/our-mission.jpg"
-            alt="Our Mission"
-            width={500}
-            height={350}
-            className="object-cover"
-          />
+      {/* Mission Section */}
+      <div className="container mx-auto py-12 md:py-16 px-4">
+        <div className="bg-darkSecondary p-6 md:p-8 rounded-xl shadow-lg">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="md:w-1/2 flex justify-center mb-6 md:mb-0 order-2 md:order-1">
+              <div className="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500">
+                <Image
+                  src="/images/our-mission.jpg"
+                  alt="Our Mission"
+                  width={500}
+                  height={350}
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="md:w-1/2 order-1 md:order-2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+                Our Mission
+              </h2>
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+                Our mission is to empower individuals through accessible,
+                high-quality education, enabling them to achieve their full
+                potential and contribute positively to society. We strive to
+                provide courses that are not only informative but also engaging
+                and practical.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="md:w-1/2 order-1 md:order-2">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-          Our Mission
-        </h2>
-        <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-          Our mission is to empower individuals through accessible,
-          high-quality education, enabling them to achieve their full
-          potential and contribute positively to society. We strive to
-          provide courses that are not only informative but also engaging
-          and practical.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 
       {/* Student Reviews Section */}
       <section className="text-center py-12 md:py-10 mb-12 overflow-hidden">
-        {" "}
-        {/* Reduced padding */}
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-16">
-          {" "}
-          {/* Reduced margin below heading */}
           What Our Students Say
         </h2>
         <div className="relative overflow-visible">
-          {" "}
-          {/* Ensure overflow is visible here */}
           <div className="animate-scroll flex gap-8 relative">
             {reviews.map((review, index) => (
               <div
                 key={index}
                 className="bg-darkSecondary p-8 md:p-10 rounded-xl shadow-lg w-72 md:w-80 flex-shrink-0 flex flex-col items-center text-center transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-50 relative"
-                style={{ overflow: "visible" }} // Ensure the card can overflow
+                style={{ overflow: "visible" }}
               >
                 <div className="w-24 h-24 mb-4 rounded-full overflow-hidden">
                   <Image
