@@ -7,8 +7,8 @@ const CoursesPage = () => {
     "java-dsa-domination": "/images/courses/java-dsa-domination.jpeg",
     "backend-domination": "/images/courses/backend-domination.jpeg",
     "frontend-domination": "/images/courses/frontend-domination.jpeg",
-    "ai-machine-learning": "/images/courses/ai-machine-learning.jpeg", // New course image
-    "cybersecurity-essentials": "/images/courses/cybersecurity-essentials.jpeg", // New course image
+    "ai-machine-learning": "/images/courses/ai-machine-learning.jpeg",
+    "cybersecurity-essentials": "/images/courses/cybersecurity-essentials.jpeg",
     "cloud-computing-aws": "/images/courses/cloud-computing-aws.jpeg", // New course image
   };
 
@@ -19,7 +19,7 @@ const CoursesPage = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/courses-page-hero-image.jpeg" // Replace this with the desired image
+            src="/images/courses-page-hero-image.jpeg"
             alt="Hero Image"
             layout="fill"
             objectFit="cover"
@@ -92,7 +92,6 @@ const CoursesPage = () => {
                 <span className="text-white">({course.rating})</span>
               </div>
               <p className="text-gray-400 mb-2">By {course.instructor}</p>
-              {/* Display price in PKR */}
               <p className="text-white font-bold text-xl mb-4">
                 PKR {course.price.toLocaleString()}
               </p>
