@@ -74,10 +74,10 @@ const About = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
         {/* Hero Content */}
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h1 className="text-5xl pt-10 md:text-5xl font-bold text-primary mb-4">
             About Us
           </h1>
-          <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-6">
+          <p className="text-xl md:text-lg text-gray-300 max-w-2xl mx-auto mb-6">
             We are dedicated to providing quality education to enhance your
             skills.
           </p>

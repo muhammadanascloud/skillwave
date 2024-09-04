@@ -30,11 +30,11 @@ const CoursesPage = () => {
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black opacity-75"></div>
         {/* Hero Content */}
-        <div className="relative z-10 fade-in">
-          <h1 className="text-5xl font-bold text-primary mb-6 fade-in">
+        <div className="relative z-10">
+          <h1 className="text-5xl font-bold text-primary mb-6">
             Master Your Skills with Our Expert-Led Courses
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8 fade-in delay-1">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
             Dive into our carefully curated courses, designed to help you gain
             industry-relevant skills and achieve your goals.
           </p>

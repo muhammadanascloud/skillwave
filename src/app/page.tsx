@@ -66,7 +66,7 @@ const Home = () => {
             className="absolute inset-0 w-full h-full object-cover z-0"
           >
             <source src="/videos/hero-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+            Your browser does not support the video.
           </video>
         </div>
         {/* Dark Overlay */}
@@ -76,7 +76,7 @@ const Home = () => {
           <h1 className="text-5xl font-bold text-primary mb-6">
             Welcome to Skillwave
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-4 fade-in delay-1">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-4">
             Find top-quality courses to boost your skills and advance your
             career.
           </p>
