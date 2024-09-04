@@ -6,7 +6,7 @@ const Contact = () => {
       {/* Contact Form Section */}
       <section className="flex-grow flex items-center justify-center">
         <div className="max-w-3xl w-full px-4 py-16 md:py-24 lg:py-32">
-          <h1 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8">
+          <h1 className="text-5xl md:text-4xl font-bold text-primary text-center mb-8">
             Contact Us
           </h1>
           <p className="text-gray-300 text-center mb-12">
